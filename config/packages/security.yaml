@@ -1,0 +1,19 @@
+security:
+    # Example firewall setup
+    providers:
+        in_memory:
+            memory:
+                users:
+                    user:
+                        password: '$2y$13$WlAhH1RkkKjDn8KU9FSYV.XM9E0gIQt5OXzPrC9aZ6pEMx45R8S4m' # "password"
+                        roles: ['ROLE_USER']
+
+    firewalls:
+        main:
+            lazy: true
+            provider: in_memory
+            form_login: ~
+            logout: ~
+
+    access_control:
+        - { path: ^/dashboard, roles: ROLE_USER }
