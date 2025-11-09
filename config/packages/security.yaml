@@ -1,5 +1,5 @@
 security:
-    # Example firewall setup
+    
     providers:
         in_memory:
             memory:
